@@ -3,14 +3,14 @@
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    border: 1px solid #3949ab;
+    border: 3px solid #3949ab;
 }
 
 .home-city-weather{
     color: #37474f;
     font-size: 30px;
     font-weight: 100;
-    text-align:center;
+    text-align:right;
 }
 
 h2{
@@ -21,13 +21,15 @@ h2{
 
 li{
     list-style: none;
-    text-align: center;
-}
-
-.weather-summary{
     text-align: right;
 }
 
-.weekday-weather-forecast{
+.weather-summary{
+    font-size: 15px;
+    text-align: right;
+}
+
+.weather-forecast-temperature{
+    margin: 10px auto;
     text-align: left;
 }
