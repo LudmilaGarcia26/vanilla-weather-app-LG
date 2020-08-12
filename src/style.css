@@ -1,13 +1,19 @@
 .weather-app{
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
     border-radius: 10px;
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    border: 3px solid #3949ab;
+    border: linear-gradient(to top, #4481eb 0%, #04befe 100%);
 }
 
-.home-city-weather{
-    color: #37474f;
+.app-image{
+position: relative;
+top: -150px;
+}
+
+.city-weather{
+    color: white;
     font-size: 30px;
     font-weight: 100;
     text-align:right;
@@ -16,7 +22,7 @@
 h1{text-align: right;}
 
 h2{
-    color: #455a64;
+    color: white;
     font-size: 18px;
     font-weight: 100;   
 }
@@ -28,6 +34,7 @@ li{
 }
 
 .weather-summary{
+    color: white;
     font-size: 15px;
     text-align: right;
 }
