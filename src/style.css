@@ -30,6 +30,10 @@ h2{
 li{
     list-style: none;
     text-align: right;
+    font-size: 20px;
+}
+
+li:first-letter{
     text-transform: capitalize;
 }
 
