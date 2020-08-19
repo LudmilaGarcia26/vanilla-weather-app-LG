@@ -68,14 +68,8 @@ for (let index = 0; index < 6; index++) {
        </div> 
        `;
 
+}  
 }
- 
-
-  
-
-  
-}
-
 
 function search(city){
 let apiKey = "0fa5338feee37a23dfae3b92287d5078";
@@ -84,7 +78,6 @@ axios.get(apiUrl).then(displayTemperature);
 
 apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayForecast);  
-
 }
 
 function handleSubmit(event){
@@ -96,4 +89,4 @@ function handleSubmit(event){
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search
+search("London");
