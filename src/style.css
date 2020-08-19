@@ -53,6 +53,12 @@ li:first-letter{
     text-align: right;
 }
 
+.col-2{
+   text-align: center; 
+}
+.col-2 img{
+    width:100%;
+}
 
 
 
