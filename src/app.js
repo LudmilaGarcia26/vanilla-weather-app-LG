@@ -34,6 +34,8 @@ let windElement = document.querySelector("#wind");
 let dateElement = document.querySelector("#date");
 let iconElement = document.querySelector("#icon");
 
+celsiusTemperature = response.data.main.temp;
+
 cityElement.innerHTML = response.data.name;
 temperatureElement.innerHTML = Math.round(response.data.main.temp);
 weatherDescription.innerHTML = response.data.weather[0].description;
@@ -42,6 +44,7 @@ windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt*1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 function displayForecast(response){
@@ -86,7 +89,29 @@ function handleSubmit(event){
    search(cityInputElement.value);
 }
 
+function displayFahreinheitTemperature(event){
+event.preventDefault();
+let temperatureElement = document.querySelector("#temperature");
+let fahreinheitTemperature = (celsiusTemperature * 9/5) + 32;
+temperatureElement.innerHTML = Math.round(fahreinheitTemperature);
+}
+
+function displayCelsiusTemperature(event){
+event.preventDefault();
+let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahreinheitLink = document.querySelector("#fahreinheit-link");
+fahreinheitLink.addEventListener("click", displayFahreinheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("London");

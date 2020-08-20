@@ -53,6 +53,14 @@ li:first-letter{
     text-align: right;
 }
 
+.weather-summary :active{
+    color: white;
+    cursor: default;
+    text-decoration:none;
+}
+
+
+
 .col-2{
    text-align: center; 
 }
